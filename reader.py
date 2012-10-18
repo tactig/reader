@@ -127,7 +127,14 @@ def type_test(v,o=None):
 				panic();
 
 			selector_info(selector);
-		#elif o[0][0] == '-p':
+		elif o[0][0] == '-p':
+			for i in type_nonsys.keys():
+				print '%(name)2d: %(val)s' % {"name":i,"val":type_nonsys[i]};
+
+			print '';
+
+			for i in type_sys.keys():
+				print '%(name)2d: %(val)s' % {"name":i,"val":type_sys[i]};
 			
 		else:
 			panic();
